@@ -14,6 +14,8 @@
 		14B9A0A22B98C18300087E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A0A12B98C18300087E39 /* Assets.xcassets */; };
 		14B9A0A52B98C18300087E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A0A32B98C18300087E39 /* LaunchScreen.storyboard */; };
 		14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */; };
+		14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAAE2B9A1391007546C5 /* Customer.swift */; };
+		14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAB22B9A13BD007546C5 /* Shipper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		14B9A0A42B98C18300087E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B9A0A62B98C18300087E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		14E3FAAE2B9A1391007546C5 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		14E3FAB22B9A13BD007546C5 /* Shipper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				14B9A0982B98C18200087E39 /* AppDelegate.swift */,
 				14B9A09A2B98C18200087E39 /* SceneDelegate.swift */,
+				14E3FAAE2B9A1391007546C5 /* Customer.swift */,
+				14E3FAB22B9A13BD007546C5 /* Shipper.swift */,
 				14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */,
 				14B9A09C2B98C18200087E39 /* ViewController.swift */,
 				14B9A09E2B98C18200087E39 /* Main.storyboard */,
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B9A09D2B98C18200087E39 /* ViewController.swift in Sources */,
+				14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */,
+				14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */,
 				14B9A0992B98C18200087E39 /* AppDelegate.swift in Sources */,
 				14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */,
 				14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */,

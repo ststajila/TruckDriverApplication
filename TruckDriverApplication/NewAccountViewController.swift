@@ -7,23 +7,53 @@
 
 import UIKit
 
-class NewAccountViewController: UIViewController {
+class Delegate{
+    static var customers: [Customer] = []
+    static var shippers: [Shipper] = []
+    
+}
 
+class NewAccountViewController: UIViewController {
+    
+    
+    
+    @IBOutlet weak var statusOutlet: UILabel!
+    @IBOutlet weak var accountSelectionOutlet: UISegmentedControl!
+    @IBOutlet weak var firstNameOutlet: UITextField!
+    @IBOutlet weak var lastNameOutlet: UITextField!
+    @IBOutlet weak var emailOutlet: UITextField!
+    @IBOutlet weak var confirmEmailOutlet: UITextField!
+    @IBOutlet weak var passwordOutlet: UITextField!
+    @IBOutlet weak var confirmPasswordOutlet: UITextField!
+    @IBOutlet weak var companynameOutlet: UITextField!
+    @IBOutlet weak var DOTOutlet: UITextField!
+    @IBOutlet weak var MCOutlet: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        statusOutlet.backgroundColor = UIColor.green
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func createNewAccountAction(_ sender: Any) {
+        
+        if accountSelectionOutlet.selectedSegmentIndex == 0{
+            if firstNameOutlet.text != "" && lastNameOutlet.text != ""{
+                
+            }else{
+                statusOutlet.backgroundColor = UIColor.red
+                statusOutlet.text = "First and Last Name are Required Fields"
+            }
+        } else{
+            print("Shipper")
+            cancelAction(self)
+        }
+        
     }
-    */
-
+    
+    @IBAction func cancelAction(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+   
 }
