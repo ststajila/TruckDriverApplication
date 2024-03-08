@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14B424E42B9B6A11005128D5 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B424E32B9B6A11005128D5 /* ViewController2.swift */; };
 		14B9A0992B98C18200087E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0982B98C18200087E39 /* AppDelegate.swift */; };
 		14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A09A2B98C18200087E39 /* SceneDelegate.swift */; };
 		14B9A09D2B98C18200087E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A09C2B98C18200087E39 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14B424E32B9B6A11005128D5 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		14B9A0952B98C18200087E39 /* TruckDriverApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckDriverApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B9A0982B98C18200087E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B9A09A2B98C18200087E39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */,
 				14B9A09C2B98C18200087E39 /* ViewController.swift */,
 				14B9A09E2B98C18200087E39 /* Main.storyboard */,
+				14B424E32B9B6A11005128D5 /* ViewController2.swift */,
 				14B9A0A12B98C18300087E39 /* Assets.xcassets */,
 				14B9A0A32B98C18300087E39 /* LaunchScreen.storyboard */,
 				14B9A0A62B98C18300087E39 /* Info.plist */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B424E42B9B6A11005128D5 /* ViewController2.swift in Sources */,
 				14B9A09D2B98C18200087E39 /* ViewController.swift in Sources */,
 				14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */,
 				14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */,

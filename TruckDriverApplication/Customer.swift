@@ -12,6 +12,7 @@ class Customer{
     var email: String
     var password: String
     
+    
     init(firstName: String, lastName: String, email: String, password: String) {
         self.firstName = firstName
         self.lastName = lastName
