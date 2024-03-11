@@ -6,15 +6,16 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class Delegate{
     static var customers: [Customer] = []
     static var shippers: [Shipper] = []
-    
+    static var ref: DatabaseReference!
 }
 
 class NewAccountViewController: UIViewController {
-    
     
     
     @IBOutlet weak var statusOutlet: UILabel!
@@ -32,6 +33,8 @@ class NewAccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Delegate.ref = Database.database().reference()
+        
         statusOutlet.backgroundColor = UIColor.green
     }
     
@@ -49,6 +52,12 @@ class NewAccountViewController: UIViewController {
                         if passwordOutlet.hasText{
                             if passwordOutlet.text == confirmPasswordOutlet.text{
                                 Delegate.customers.append(Customer(firstName: firstNameOutlet.text!, lastName: lastNameOutlet.text!, email: emailOutlet.text!, password: passwordOutlet.text!))
+                                
+                                let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "email": emailOutlet.text!, "password": passwordOutlet.text!]
+                                
+                                Delegate.ref.child("customer").childByAutoId().setValue(dict)
+                                
+                                
                             }else{
                                 statusOutlet.backgroundColor = UIColor.red
                                 statusOutlet.text = "Passwords do not match"
@@ -83,6 +92,11 @@ class NewAccountViewController: UIViewController {
                                                 if MCOutlet.hasText{
                                                     if let mc = Int(MCOutlet.text!){
                                                         Delegate.shippers.append(Shipper(firstName: firstNameOutlet.text!, lastName: lastNameOutlet.text!, companyName: companynameOutlet.text!, DOTNumber: dot, MCNumber: mc, email: emailOutlet.text!, password: passwordOutlet.text!))
+                                                        
+                                                        let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "companyName": companynameOutlet.text!, "DOTNumber": dot, "MCNumber": mc, "email": emailOutlet.text!, "password": passwordOutlet.text!] as! [String: Any]
+                                                        
+                                                        Delegate.ref.child("shippers").childByAutoId().setValue(dict)
+                                                        
                                                     }else{
                                                         statusOutlet.backgroundColor = UIColor.red
                                                         statusOutlet.text = "MC must contain only numbers"

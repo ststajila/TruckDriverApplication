@@ -11,6 +11,7 @@ class Customer{
     var lastName: String
     var email: String
     var password: String
+    var key = 0
     
     
     init(firstName: String, lastName: String, email: String, password: String) {
@@ -18,5 +19,32 @@ class Customer{
         self.lastName = lastName
         self.email = email
         self.password = password
+    }
+    
+    init(dict: [String: Any]){
+        if let fn = dict["firstName"] as? String{
+            firstName = fn
+        } else{
+            firstName = ""
+        }
+        
+        if let ln = dict["lastName"] as? String{
+            lastName = ln
+        } else{
+            lastName = ""
+        }
+        
+        if let e = dict["email"] as? String{
+            email = e
+        } else{
+            email = ""
+        }
+        
+        if let p = dict["password"] as? String{
+            password = p
+        } else{
+            password = ""
+        }
+        
     }
 }
