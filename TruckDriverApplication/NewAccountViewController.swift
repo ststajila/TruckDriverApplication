@@ -32,8 +32,6 @@ class NewAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        Delegate.ref = Database.database().reference()
         
         statusOutlet.backgroundColor = UIColor.green
     }
@@ -46,7 +44,7 @@ class NewAccountViewController: UIViewController {
         
         if accountSelectionOutlet.selectedSegmentIndex == 0{
             if firstNameOutlet.hasText && lastNameOutlet.hasText{
-                if emailOutlet.hasText && emailOutlet.text!.contains(String(repeating: Character("@"), count: 1)){
+                if emailOutlet.hasText && emailOutlet.text!.contains(String(repeating: Character("@"), count: 1)) && emailOutlet.text!.contains(String(repeating: Character("."), count: 1)){
                     if emailOutlet.text == confirmEmailOutlet.text{
                         
                         if passwordOutlet.hasText{
@@ -57,6 +55,7 @@ class NewAccountViewController: UIViewController {
                                 
                                 Delegate.ref.child("customer").childByAutoId().setValue(dict)
                                 
+                                self.dismiss(animated: true)
                                 
                             }else{
                                 statusOutlet.backgroundColor = UIColor.red
@@ -79,9 +78,9 @@ class NewAccountViewController: UIViewController {
                 statusOutlet.text = "First and Last Name are Required Fields"
             }
         } else{
-            if accountSelectionOutlet.selectedSegmentIndex == 0{
+            if accountSelectionOutlet.selectedSegmentIndex == 1{
                 if firstNameOutlet.hasText && lastNameOutlet.hasText{
-                    if emailOutlet.hasText && emailOutlet.text!.contains(String(repeating: Character("@"), count: 1)){
+                    if emailOutlet.hasText && emailOutlet.text!.contains(String(repeating: Character("@"), count: 1)) && emailOutlet.text!.contains(String(repeating: Character("."), count: 1)){
                         if emailOutlet.text == confirmEmailOutlet.text{
                             
                             if passwordOutlet.hasText{
@@ -96,6 +95,8 @@ class NewAccountViewController: UIViewController {
                                                         let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "companyName": companynameOutlet.text!, "DOTNumber": dot, "MCNumber": mc, "email": emailOutlet.text!, "password": passwordOutlet.text!] as! [String: Any]
                                                         
                                                         Delegate.ref.child("shippers").childByAutoId().setValue(dict)
+                                                        
+                                                        self.dismiss(animated: true)
                                                         
                                                     }else{
                                                         statusOutlet.backgroundColor = UIColor.red

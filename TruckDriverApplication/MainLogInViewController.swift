@@ -16,26 +16,54 @@ class MainLogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Delegate.ref = Database.database().reference()
 
-        // Do any additional setup after loading the view.
+        Delegate.ref.child("shipper").observe(.childAdded) { DataSnapshot in
+            
+            let dict = DataSnapshot.value as! [String: Any]
+            Delegate.shippers.append(Shipper(dict: dict))
+            
+            
+        }  
+        
+        Delegate.ref.child("customer").observe(.childAdded) { DataSnapshot in
+            
+            let dict = DataSnapshot.value as! [String: Any]
+            Delegate.customers.append(Customer(dict: dict))
+        }
     }
     
     
     @IBAction func signIn(_ sender: Any) {
     
+        if isCustomer(email: emailOutlet.text!, password: passwordOutlet.text!){
+            performSegue(withIdentifier: "customerAccount", sender: self)
+        } 
+        
+        if isShipper(email: emailOutlet.text!, password: passwordOutlet.text!){
+            performSegue(withIdentifier: "shipperAccount", sender: self)
+        }
         
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func isCustomer(email: String, password: String) -> Bool{
+        for c in Delegate.customers{
+            if c.email == email && c.password == password{
+                return true
+            }
+        }
+        return false
     }
-    */
-
+    
+    func isShipper(email: String, password: String) -> Bool{
+        for s in Delegate.shippers{
+            if s.email == email && s.password == password{
+                return true
+            }
+        }
+        return false
+    }
 }
