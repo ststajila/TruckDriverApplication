@@ -127,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="3277.0992366412211" y="-475.35211267605638"/>
         </scene>
-        <!--View Controller-->
+        <!--Delivery-->
         <scene sceneID="bss-oa-j3Z">
             <objects>
                 <viewController id="3qo-qD-kLl" sceneMemberID="viewController">
@@ -137,11 +137,28 @@
                         <viewLayoutGuide key="safeArea" id="MBM-2U-ltk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Delivery" image="car" catalog="system" selectedImage="car.fill" id="qo1-q8-QlP"/>
                     <navigationItem key="navigationItem" id="oxt-BE-kJz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3985" y="-465"/>
+            <point key="canvasLocation" x="4031" y="-475"/>
+        </scene>
+        <!--Completed-->
+        <scene sceneID="cNB-L2-7nt">
+            <objects>
+                <viewController id="Soj-ma-xmA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0N-WI-qBV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rCN-h1-V9W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Completed" image="checkmark.seal" catalog="system" selectedImage="checkmark.seal.fill" id="oEu-PD-1V5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMD-9x-GiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4802" y="-475"/>
         </scene>
         <!--New Account View Controller-->
         <scene sceneID="fSq-Mh-drx">
@@ -310,30 +327,126 @@
             </objects>
             <point key="canvasLocation" x="-880" y="710"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Orders View Controller-->
         <scene sceneID="kTo-ML-Nph">
             <objects>
-                <viewController id="MVS-3Y-4By" sceneMemberID="viewController">
+                <viewController id="MVS-3Y-4By" customClass="CustomerOrdersViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1tx-XV-Bl2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Costomer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWd-ef-yne">
-                                <rect key="frame" x="106" y="85" width="201" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="erg-yt-2o5">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ngz-ko-I2W">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Lyc-At-gCa">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lyc-At-gCa" id="PZy-Qk-hmw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ebC-qW-PWo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="erg-yt-2o5" firstAttribute="leading" secondItem="ebC-qW-PWo" secondAttribute="leading" id="0rH-fq-eNT"/>
+                            <constraint firstItem="erg-yt-2o5" firstAttribute="top" secondItem="ebC-qW-PWo" secondAttribute="top" id="CZ6-an-n5d"/>
+                            <constraint firstItem="ebC-qW-PWo" firstAttribute="bottom" secondItem="erg-yt-2o5" secondAttribute="bottom" id="cTF-Ub-98G"/>
+                            <constraint firstItem="ebC-qW-PWo" firstAttribute="trailing" secondItem="erg-yt-2o5" secondAttribute="trailing" id="qa4-bC-jUq"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="zFz-fG-xGJ"/>
+                    <navigationItem key="navigationItem" id="zFz-fG-xGJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="RZR-Gw-u0C">
+                            <connections>
+                                <segue destination="v11-UD-nnJ" kind="show" id="FrY-tL-hEG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjC-pA-dC5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2350.3816793893129" y="486.61971830985919"/>
+        </scene>
+        <!--OrderA Car Delivery View Controller-->
+        <scene sceneID="uH9-Mz-nnX">
+            <objects>
+                <viewController id="v11-UD-nnJ" customClass="OrderACarDeliveryViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mup-bo-OM1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Kq-28-S0E">
+                                <rect key="frame" x="0.0" y="103.00000000000001" width="393" height="217.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Made" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdk-BS-0Xg">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Made" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-5b-5t2">
+                                        <rect key="frame" x="0.0" y="20.333333333333329" width="393" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeE-xf-uLn">
+                                        <rect key="frame" x="0.0" y="54.33333333333335" width="393" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Qx-rK-A5e">
+                                        <rect key="frame" x="0.0" y="74.666666666666657" width="393" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIK-vc-wUy">
+                                        <rect key="frame" x="0.0" y="108.66666666666666" width="393" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-JI-Ljn">
+                                        <rect key="frame" x="0.0" y="129" width="393" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" VIN number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDw-Wm-pk0">
+                                        <rect key="frame" x="0.0" y="163" width="393" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="VIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58a-nX-mn4">
+                                        <rect key="frame" x="0.0" y="183.33333333333331" width="393" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h7S-cP-dMd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Kq-28-S0E" firstAttribute="top" secondItem="h7S-cP-dMd" secondAttribute="top" id="OdQ-XC-yWF"/>
+                            <constraint firstItem="h7S-cP-dMd" firstAttribute="trailing" secondItem="5Kq-28-S0E" secondAttribute="trailing" id="Yhr-P0-8Wc"/>
+                            <constraint firstItem="5Kq-28-S0E" firstAttribute="leading" secondItem="h7S-cP-dMd" secondAttribute="leading" id="cPq-hn-sfZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BGm-LD-Kw8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSP-N9-z5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3314" y="487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="woG-V6-iHe">
@@ -356,23 +469,30 @@
         <!--Tab Bar Controller-->
         <scene sceneID="IJW-mj-Dyz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3s4-1e-cxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WMh-d6-Z9S" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MHD-iv-KgM"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RWq-zc-8Oz">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="3Hk-3n-bqs" kind="relationship" relationship="viewControllers" id="aFS-Ab-CX4"/>
+                        <segue destination="3qo-qD-kLl" kind="relationship" relationship="viewControllers" id="B74-oz-JIR"/>
+                        <segue destination="Soj-ma-xmA" kind="relationship" relationship="viewControllers" id="lcV-im-mGR"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3s4-1e-cxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2350.3816793893129" y="-475.35211267605638"/>
         </scene>
     </scenes>
     <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="car.fill" catalog="system" width="128" height="95"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>
         <image name="list.bullet.clipboard.fill" catalog="system" width="98" height="128"/>
         <systemColor name="systemBackgroundColor">

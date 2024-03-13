@@ -42,6 +42,8 @@
 		14B9A0A22B98C18300087E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A0A12B98C18300087E39 /* Assets.xcassets */; };
 		14B9A0A52B98C18300087E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A0A32B98C18300087E39 /* LaunchScreen.storyboard */; };
 		14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */; };
+		14BFAF042BA1F22A002B4496 /* CustomerOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFAF032BA1F22A002B4496 /* CustomerOrdersViewController.swift */; };
+		14BFAF062BA1F277002B4496 /* OrderACarDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */; };
 		14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAAE2B9A1391007546C5 /* Customer.swift */; };
 		14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAB22B9A13BD007546C5 /* Shipper.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		14B9A0A42B98C18300087E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B9A0A62B98C18300087E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		14BFAF032BA1F22A002B4496 /* CustomerOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerOrdersViewController.swift; sourceTree = "<group>"; };
+		14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderACarDeliveryViewController.swift; sourceTree = "<group>"; };
 		14E3FAAE2B9A1391007546C5 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		14E3FAB22B9A13BD007546C5 /* Shipper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +124,8 @@
 			children = (
 				14B9A0982B98C18200087E39 /* AppDelegate.swift */,
 				14B9A09A2B98C18200087E39 /* SceneDelegate.swift */,
+				14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */,
+				14BFAF032BA1F22A002B4496 /* CustomerOrdersViewController.swift */,
 				14E3FAAE2B9A1391007546C5 /* Customer.swift */,
 				14E3FAB22B9A13BD007546C5 /* Shipper.swift */,
 				14B9A0AC2B98C7F700087E39 /* NewAccountViewController.swift */,
@@ -237,11 +243,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BFAF042BA1F22A002B4496 /* CustomerOrdersViewController.swift in Sources */,
 				14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */,
 				1470DC2C2B9F4AD9003F113E /* MainLogInViewController.swift in Sources */,
 				14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */,
 				14B9A0992B98C18200087E39 /* AppDelegate.swift in Sources */,
 				14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */,
+				14BFAF062BA1F277002B4496 /* OrderACarDeliveryViewController.swift in Sources */,
 				14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
