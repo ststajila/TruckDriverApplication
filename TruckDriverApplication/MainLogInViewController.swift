@@ -22,7 +22,9 @@ class MainLogInViewController: UIViewController {
         Delegate.ref.child("shippers").observe(.childAdded) { DataSnapshot in
             
             let dict = DataSnapshot.value as! [String: Any]
-            Delegate.shippers.append(Shipper(dict: dict))
+            let s = Shipper(dict: dict)
+            s.key = DataSnapshot.key
+            Delegate.shippers.append(s)
             
             
         }  
@@ -30,7 +32,9 @@ class MainLogInViewController: UIViewController {
         Delegate.ref.child("customer").observe(.childAdded) { DataSnapshot in
             
             let dict = DataSnapshot.value as! [String: Any]
-            Delegate.customers.append(Customer(dict: dict))
+            var c = Customer(dict: dict)
+            c.key = DataSnapshot.key
+            Delegate.customers.append(c)
         }
         
         Delegate.ref.child("customer").observeSingleEvent(of: .value) { DataSnapshot in
@@ -48,7 +52,7 @@ class MainLogInViewController: UIViewController {
     
         if isCustomer(email: emailOutlet.text!, password: passwordOutlet.text!){
             performSegue(withIdentifier: "customerAccount", sender: self)
-        } 
+        }
         
         if isShipper(email: emailOutlet.text!, password: passwordOutlet.text!){
             performSegue(withIdentifier: "shipperAccount", sender: self)
@@ -61,6 +65,7 @@ class MainLogInViewController: UIViewController {
     func isCustomer(email: String, password: String) -> Bool{
         for c in Delegate.customers{
             if c.email == email && c.password == password{
+               Delegate.currentSession = c.key
                 return true
             }
         }
@@ -70,6 +75,7 @@ class MainLogInViewController: UIViewController {
     func isShipper(email: String, password: String) -> Bool{
         for s in Delegate.shippers{
             if s.email == email && s.password == password{
+                Delegate.currentSession = s.key
                 return true
             }
         }

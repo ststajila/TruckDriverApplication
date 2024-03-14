@@ -5,10 +5,15 @@
 //  Created by STANISLAV STAJILA on 3/13/24.
 //
 
+class carCell: UITableViewCell{
+    
+}
+
 import UIKit
 
 class CustomerOrdersViewController: UIViewController {
-
+    @IBOutlet weak var tableViewOutlet: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

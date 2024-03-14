@@ -11,7 +11,8 @@ class Customer{
     var lastName: String
     var email: String
     var password: String
-    var key = 0
+    var key = ""
+    var orders: [Car] = []
     
     
     init(firstName: String, lastName: String, email: String, password: String) {

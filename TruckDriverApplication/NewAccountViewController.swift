@@ -13,6 +13,7 @@ class Delegate{
     static var customers: [Customer] = []
     static var shippers: [Shipper] = []
     static var ref: DatabaseReference!
+    static var currentSession = ""
 }
 
 class NewAccountViewController: UIViewController {
@@ -54,6 +55,8 @@ class NewAccountViewController: UIViewController {
                                 let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "email": emailOutlet.text!, "password": passwordOutlet.text!]
                                 
                                 Delegate.ref.child("customer").childByAutoId().setValue(dict)
+                                
+                                
                                 
                                 self.dismiss(animated: true)
                                 

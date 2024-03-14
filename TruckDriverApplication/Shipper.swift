@@ -14,7 +14,8 @@ class Shipper{
     var MCNumber: Int
     var email: String
     var password: String
-    var key = 0
+    var key = ""
+    var orders: [Car] = []
     
     init(firstName: String, lastName: String, companyName: String, DOTNumber: Int, MCNumber: Int, email: String, password: String) {
         self.firstName = firstName
