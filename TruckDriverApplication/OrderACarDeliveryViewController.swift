@@ -25,6 +25,9 @@ class Car{
 import UIKit
 
 class OrderACarDeliveryViewController: UIViewController {
+    
+    var alertControler = UIAlertController(title: "Invalid Format", message: "", preferredStyle: .alert)
+    var alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
 
     @IBOutlet weak var madeOutlet: UITextField!
     @IBOutlet weak var modelOutlet: UITextField!
@@ -35,22 +38,50 @@ class OrderACarDeliveryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        alertControler.addAction(alertAction)
     }
     
     @IBAction func placeOrder(_ sender: Any) {
     
-        if let y = Int(yearOutlet.text!){
-            if let c =  Double(costOutlet.text!){
-                var car = Car(made: madeOutlet.text!, model: modelOutlet.text!, year: y, vin: vinNumberOutlet.text!, cost: c)
-                
-                for c in Delegate.customers{
-                    if c.key == Delegate.currentSession{
-                        c.orders.append(car)
+        if madeOutlet.hasText && modelOutlet.hasText{
+            if let y = Int(yearOutlet.text!){
+                if vinNumberOutlet.hasText {
+                    
+                    if let c =  Double(costOutlet.text!){
+                        var car = Car(made: madeOutlet.text!, model: modelOutlet.text!, year: y, vin: vinNumberOutlet.text!, cost: c)
+                        
+                        for c in Delegate.customers{
+                            if c.key == Delegate.currentSession{
+                                c.orders.append(car)
+                            }
+                         
+                            CTDelegate.tableView.reloadData()
+                            
+                            self.dismiss(animated: true)
+                            
+                        }
+                        
+                        
+                        
+                    }else{
+                        alertControler.title = "Invalid Data Format"
+                        alertControler.message = "Cost is a required field and must be a double"
+                        present(alertControler, animated: true)
                     }
+                }else{
+                    alertControler.title = "Required Field is Blank"
+                    alertControler.message = "VIN number is required"
+                    present(alertControler, animated: true)
                 }
-                
+            }else{
+                alertControler.title = "Invalid Data Format"
+                alertControler.message = "Year is a required field and must contain a whole number"
+                present(alertControler, animated: true)
             }
+        }else{
+            alertControler.title = "Required Field is Blank"
+            alertControler.message = "Made and Model are required fields!"
+            present(alertControler, animated: true)
         }
        
         
