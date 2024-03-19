@@ -52,10 +52,10 @@ class MainLogInViewController: UIViewController {
     
         if isCustomer(email: emailOutlet.text!, password: passwordOutlet.text!){
             performSegue(withIdentifier: "customerAccount", sender: self)
-        }
-        
-        if isShipper(email: emailOutlet.text!, password: passwordOutlet.text!){
+        } else if isShipper(email: emailOutlet.text!, password: passwordOutlet.text!){
             performSegue(withIdentifier: "shipperAccount", sender: self)
+        }else{
+            print("Error")
         }
         
         

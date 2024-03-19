@@ -52,7 +52,9 @@ class NewAccountViewController: UIViewController {
                             if passwordOutlet.text == confirmPasswordOutlet.text{
                                 Delegate.customers.append(Customer(firstName: firstNameOutlet.text!, lastName: lastNameOutlet.text!, email: emailOutlet.text!, password: passwordOutlet.text!))
                                 
-                                let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "email": emailOutlet.text!, "password": passwordOutlet.text!]
+                                let carsDict: [Car] = []
+                                
+                                let dict = ["firstName": firstNameOutlet.text!, "lastName": lastNameOutlet.text!, "email": emailOutlet.text!, "password": passwordOutlet.text!, "orders": carsDict] as [String : Any]
                                 
                                 Delegate.ref.child("customer").childByAutoId().setValue(dict)
                                 

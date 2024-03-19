@@ -44,6 +44,9 @@ class OrderACarDeliveryViewController: UIViewController {
     @IBAction func placeOrder(_ sender: Any) {
     
         if madeOutlet.hasText && modelOutlet.hasText{
+            
+            var custDict: [String : Any]?
+            
             if let y = Int(yearOutlet.text!){
                 if vinNumberOutlet.hasText {
                     
@@ -53,11 +56,17 @@ class OrderACarDeliveryViewController: UIViewController {
                         for c in Delegate.customers{
                             if c.key == Delegate.currentSession{
                                 c.orders.append(car)
+                                
+                                var ordersDict = ["made": car.made, "model": car.model, "year": car.year, "vin": car.vin, "cost": car.cost] as [String: Any]
+                                custDict = ["firstName": c.firstName, "lastName": c.lastName, "email": c.email, "password": c.password, "orders": ordersDict]
                             }
                          
                             CTDelegate.tableView.reloadData()
                             
-                            self.dismiss(animated: true)
+                            if let c = custDict{
+                                Delegate.ref.child("customer").child(Delegate.currentSession).updateChildValues(c)
+                                self.dismiss(animated: true)
+                            }
                             
                         }
                         

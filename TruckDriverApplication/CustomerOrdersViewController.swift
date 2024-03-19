@@ -29,16 +29,16 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
         super.viewDidLoad()
         
         CTDelegate.tableView = tableViewOutlet
-
-        tableViewOutlet.reloadData()
         
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
+//        tableViewOutlet.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         for c in Delegate.customers{
             if c.key == Delegate.currentSession{
+                print("\(c.orders.count)")
                 return c.orders.count
             }
         }
@@ -55,15 +55,14 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
         for c in Delegate.customers{
             if c.key == Delegate.currentSession{
                 myOrders = c.orders
-                print("found")
             }
         }
         
-        cell.modelLabel.text = myOrders[indexPath.row].model
-        cell.madeLabel.text = myOrders[indexPath.row].made
-        cell.yearLabel.text = "\(myOrders[indexPath.row].year)"
-        cell.VINNumberLabel.text = myOrders[indexPath.row].vin
-        cell.priceLabel.text = "\(myOrders[indexPath.row].cost)"
+        cell.modelLabel.text = "Model: \(myOrders[indexPath.row].model)"
+        cell.madeLabel.text = "Made: \(myOrders[indexPath.row].made)"
+        cell.yearLabel.text = "Year: \(myOrders[indexPath.row].year)"
+        cell.VINNumberLabel.text = "VIN: \(myOrders[indexPath.row].vin)"
+        cell.priceLabel.text = "Price: \(myOrders[indexPath.row].cost)"
         return cell
     }
 }
