@@ -35,6 +35,16 @@ class MainLogInViewController: UIViewController {
             var c = Customer(dict: dict)
             c.key = DataSnapshot.key
             Delegate.customers.append(c)
+            
+        }
+        
+        Delegate.ref.child("orders").observe(.childAdded) { DataSnapshot in
+            
+            let dict = DataSnapshot.value as! [String: Any]
+            
+            let car = Car(dict: dict)
+            
+            Delegate.orders.append(car)
         }
         
         Delegate.ref.child("customer").observeSingleEvent(of: .value) { DataSnapshot in
@@ -42,6 +52,10 @@ class MainLogInViewController: UIViewController {
         }
         
         Delegate.ref.child("shippers").observeSingleEvent(of: .value) { DataSnapshot in
+            print("ready")
+        }
+        
+        Delegate.ref.child("orders").observeSingleEvent(of: .value) { DataSnapshot in
             print("ready")
         }
         

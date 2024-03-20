@@ -28,6 +28,18 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for car in Delegate.orders{
+            if car.belongsTo == Delegate.currentSession{
+                
+                for c in Delegate.customers{
+                    if c.key == Delegate.currentSession{
+                        c.orders.append(car)
+                    }
+                }
+            }
+        }
+        
+        
         CTDelegate.tableView = tableViewOutlet
         
         tableViewOutlet.delegate = self

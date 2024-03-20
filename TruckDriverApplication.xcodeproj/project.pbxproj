@@ -36,6 +36,7 @@
 		1470DC632B9F4D19003F113E /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1470DC622B9F4D19003F113E /* FirebaseRemoteConfigSwift */; };
 		1470DC652B9F4D19003F113E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1470DC642B9F4D19003F113E /* FirebaseStorage */; };
 		1470DC672B9F4D19003F113E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1470DC662B9F4D19003F113E /* FirebaseStorageCombine-Community */; };
+		14B6E8E42BAB2538008291CC /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B6E8E32BAB2538008291CC /* BoardViewController.swift */; };
 		14B9A0992B98C18200087E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A0982B98C18200087E39 /* AppDelegate.swift */; };
 		14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B9A09A2B98C18200087E39 /* SceneDelegate.swift */; };
 		14B9A0A02B98C18200087E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B9A09E2B98C18200087E39 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		1470DC2B2B9F4AD9003F113E /* MainLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogInViewController.swift; sourceTree = "<group>"; };
 		1470DC2F2B9F4C16003F113E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14B6E8E32BAB2538008291CC /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		14B9A0952B98C18200087E39 /* TruckDriverApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TruckDriverApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B9A0982B98C18200087E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B9A09A2B98C18200087E39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				14B9A0982B98C18200087E39 /* AppDelegate.swift */,
 				14B9A09A2B98C18200087E39 /* SceneDelegate.swift */,
+				14B6E8E32BAB2538008291CC /* BoardViewController.swift */,
 				14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */,
 				14BFAF032BA1F22A002B4496 /* CustomerOrdersViewController.swift */,
 				14E3FAAE2B9A1391007546C5 /* Customer.swift */,
@@ -251,6 +254,7 @@
 				14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */,
 				14BFAF062BA1F277002B4496 /* OrderACarDeliveryViewController.swift in Sources */,
 				14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */,
+				14B6E8E42BAB2538008291CC /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

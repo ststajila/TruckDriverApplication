@@ -47,36 +47,5 @@ class Customer{
             password = ""
         }
         
-        if let d = dict["orders"] as? String{
-            
-            var made = ""
-            var model = ""
-            var year = 0
-            var vin = ""
-            var cost = 0.0
-            
-            if let m = dict["made"] as? String{
-                made = m
-            }
-            if let m = dict["model"] as? String{
-                model = m
-            }
-            if let y = dict["year"] as? Int{
-                year = y
-            }
-            if let v = dict["vin"] as? String{
-                vin = v
-            }
-            if let c = dict["cost"] as? Double{
-                cost = c
-            }
-            
-            let car = Car(made: made, model: model, year: year, vin: vin, cost: cost)
-            orders.append(car)
-            
-        } else{
-            orders = []
-        }
-        
     }
 }

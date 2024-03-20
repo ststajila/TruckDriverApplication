@@ -11,13 +11,48 @@ class Car{
     var year: Int
     var vin: String
     var cost: Double
+    var belongsTo: String
     
-    init(made: String, model: String, year: Int, vin: String, cost: Double) {
+    init(made: String, model: String, year: Int, vin: String, cost: Double, belongsTo: String) {
         self.made = made
         self.model = model
         self.year = year
         self.vin = vin
         self.cost = cost
+        self.belongsTo = belongsTo
+    }
+    
+    init(dict: [String: Any]){
+        if let m = dict["made"] as? String{
+            made = m
+        }else{
+            made = ""
+        }
+        if let m = dict["model"] as? String{
+            model = m
+        }else{
+            model = ""
+        }
+        if let y = dict["year"] as? Int{
+            year = y
+        }else{
+            year = 0
+        }
+        if let v = dict["vin"] as? String{
+            vin = v
+        }else{
+            vin = ""
+        }
+        if let c = dict["cost"] as? Double{
+            cost = c
+        }else{
+            cost = 0
+        }
+        if let b = dict["belongsTo"] as? String{
+            belongsTo = b
+        }else{
+            belongsTo = ""
+        }
     }
 }
 
@@ -51,22 +86,21 @@ class OrderACarDeliveryViewController: UIViewController {
                 if vinNumberOutlet.hasText {
                     
                     if let c =  Double(costOutlet.text!){
-                        var car = Car(made: madeOutlet.text!, model: modelOutlet.text!, year: y, vin: vinNumberOutlet.text!, cost: c)
+                        var car = Car(made: madeOutlet.text!, model: modelOutlet.text!, year: y, vin: vinNumberOutlet.text!, cost: c, belongsTo: Delegate.currentSession)
                         
                         for c in Delegate.customers{
                             if c.key == Delegate.currentSession{
+                                
                                 c.orders.append(car)
                                 
-                                var ordersDict = ["made": car.made, "model": car.model, "year": car.year, "vin": car.vin, "cost": car.cost] as [String: Any]
-                                custDict = ["firstName": c.firstName, "lastName": c.lastName, "email": c.email, "password": c.password, "orders": ordersDict]
+                                var ordersDict = ["made": car.made, "model": car.model, "year": car.year, "vin": car.vin, "cost": car.cost, "belongsTo": car.belongsTo] as [String: Any]
+                                
+                                Delegate.ref.child("orders").childByAutoId().setValue(ordersDict)
                             }
                          
                             CTDelegate.tableView.reloadData()
                             
-                            if let c = custDict{
-                                Delegate.ref.child("customer").child(Delegate.currentSession).updateChildValues(c)
                                 self.dismiss(animated: true)
-                            }
                             
                         }
                         
