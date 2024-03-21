@@ -12,6 +12,7 @@ class Car{
     var vin: String
     var cost: Double
     var belongsTo: String
+    var key = ""
     
     init(made: String, model: String, year: Int, vin: String, cost: Double, belongsTo: String) {
         self.made = made

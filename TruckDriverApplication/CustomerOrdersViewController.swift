@@ -28,6 +28,12 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        for c in Delegate.customers{
+            if c.key == Delegate.currentSession{
+                c.orders = []
+            }
+        }
+        
         for car in Delegate.orders{
             if car.belongsTo == Delegate.currentSession{
                 
@@ -76,5 +82,24 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
         cell.VINNumberLabel.text = "VIN: \(myOrders[indexPath.row].vin)"
         cell.priceLabel.text = "Price: \(myOrders[indexPath.row].cost)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            for c in Delegate.customers{
+                if c.key == Delegate.currentSession{
+                    print("Array: \(c.orders.count)")
+                    for i in 0..<Delegate.orders.count{
+                            if Delegate.orders[i].vin == c.orders[indexPath.row].vin{
+                                Delegate.ref.child("orders").removeValue(forKey: c.orders[indexPath.row].key)
+                                Delegate.orders.remove(at: i)
+                                c.orders.remove(at: indexPath.row)
+                                tableView.reloadData()
+                                break
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
