@@ -76,6 +76,84 @@
             </objects>
             <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
         </scene>
+        <!--More Info View Controller-->
+        <scene sceneID="CTk-fQ-i7p">
+            <objects>
+                <viewController id="cdn-Uv-ILc" customClass="MoreInfoViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QDz-0e-aOJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-lR-z9B">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-T5-QX5">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-km-eKi">
+                                        <rect key="frame" x="0.0" y="143" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFc-Mt-9zE">
+                                        <rect key="frame" x="0.0" y="286" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPh-zM-vaC">
+                                        <rect key="frame" x="0.0" y="429" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY2-6Z-9O1">
+                                        <rect key="frame" x="0.0" y="572" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dif-9M-15d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qFH-lR-z9B" firstAttribute="leading" secondItem="dif-9M-15d" secondAttribute="leading" id="93J-Ks-p1u"/>
+                            <constraint firstItem="dif-9M-15d" firstAttribute="bottom" secondItem="qFH-lR-z9B" secondAttribute="bottom" id="Nob-hU-fH8"/>
+                            <constraint firstItem="qFH-lR-z9B" firstAttribute="top" secondItem="dif-9M-15d" secondAttribute="top" id="d2z-Lx-XCD"/>
+                            <constraint firstItem="dif-9M-15d" firstAttribute="trailing" secondItem="qFH-lR-z9B" secondAttribute="trailing" id="r4s-3P-H2M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VKj-GF-HSW">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ssf-iO-HG1">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="aw8-lN-01b">
+                                <rect key="frame" x="302" y="0.0" width="75" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system"/>
+                                <connections>
+                                    <action selector="claim:" destination="cdn-Uv-ILc" eventType="touchUpInside" id="nQl-MB-iwQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="VINLabel" destination="IPh-zM-vaC" id="tCS-7r-TVZ"/>
+                        <outlet property="costLabel" destination="bY2-6Z-9O1" id="Svf-bZ-ovk"/>
+                        <outlet property="madeLabel" destination="xkt-T5-QX5" id="pvP-40-rkq"/>
+                        <outlet property="modelLabel" destination="fNm-km-eKi" id="lls-eH-Ycf"/>
+                        <outlet property="yearLabel" destination="FFc-Mt-9zE" id="whW-ra-as7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDX-E0-qcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3632.8244274809158" y="-1158.4507042253522"/>
+        </scene>
         <!--Board-->
         <scene sceneID="9AL-DG-ABt">
             <objects>
@@ -174,6 +252,7 @@
                     <navigationItem key="navigationItem" id="p7q-Sq-sFW"/>
                     <connections>
                         <outlet property="tableView" destination="Rh8-k1-Nhw" id="RUD-7r-bSZ"/>
+                        <segue destination="cdn-Uv-ILc" kind="show" identifier="moreInfo" id="MkG-VV-6My"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcA-T7-QWc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,15 +262,95 @@
         <!--Delivery-->
         <scene sceneID="bss-oa-j3Z">
             <objects>
-                <viewController id="3qo-qD-kLl" sceneMemberID="viewController">
+                <viewController id="3qo-qD-kLl" customClass="DeliveryViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izY-qx-jw2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jQc-nd-UJ0">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8Cx-5H-dCf">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCell" id="SlM-UM-ZcN" customClass="CarCell" customModule="TruckDriverApplication" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="95.333335876464844"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SlM-UM-ZcN" id="0Oc-3b-rAH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="95.333335876464844"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-fT-qJa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="95.333333333333329"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGh-9D-1mq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-6Z-xCa">
+                                                                    <rect key="frame" x="0.0" y="19" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-Cn-XiW">
+                                                                    <rect key="frame" x="0.0" y="38" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF4-LY-W5b">
+                                                                    <rect key="frame" x="0.0" y="57" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-9K-fGE">
+                                                                    <rect key="frame" x="0.0" y="76" width="393" height="19.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="ZJb-fT-qJa" secondAttribute="bottom" id="1aY-uu-MIa"/>
+                                                        <constraint firstItem="ZJb-fT-qJa" firstAttribute="leading" secondItem="0Oc-3b-rAH" secondAttribute="leading" id="cNd-Bn-7n3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZJb-fT-qJa" secondAttribute="trailing" id="d2v-kV-FKJ"/>
+                                                        <constraint firstItem="ZJb-fT-qJa" firstAttribute="top" secondItem="0Oc-3b-rAH" secondAttribute="top" id="grN-R9-w8L"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="VINNumberLabel" destination="uF4-LY-W5b" id="LMz-yl-NWi"/>
+                                                    <outlet property="madeLabel" destination="KGh-9D-1mq" id="H6f-kF-QlR"/>
+                                                    <outlet property="modelLabel" destination="1XQ-6Z-xCa" id="E7g-pD-Id8"/>
+                                                    <outlet property="priceLabel" destination="XDT-9K-fGE" id="wqd-MP-wq4"/>
+                                                    <outlet property="yearLabel" destination="UZC-Cn-XiW" id="z5F-iX-OOv"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MBM-2U-ltk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jQc-nd-UJ0" firstAttribute="leading" secondItem="MBM-2U-ltk" secondAttribute="leading" id="Sz2-Bp-BI3"/>
+                            <constraint firstAttribute="trailing" secondItem="jQc-nd-UJ0" secondAttribute="trailing" id="jnd-sm-mMA"/>
+                            <constraint firstItem="jQc-nd-UJ0" firstAttribute="top" secondItem="MBM-2U-ltk" secondAttribute="top" id="q0Z-au-8bv"/>
+                            <constraint firstAttribute="bottom" secondItem="jQc-nd-UJ0" secondAttribute="bottom" id="s2c-Pu-rxV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Delivery" image="car" catalog="system" selectedImage="car.fill" id="qo1-q8-QlP"/>
                     <navigationItem key="navigationItem" id="oxt-BE-kJz"/>
+                    <connections>
+                        <outlet property="tableView" destination="8Cx-5H-dCf" id="EaK-qH-4He"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,14 +359,94 @@
         <!--Completed-->
         <scene sceneID="cNB-L2-7nt">
             <objects>
-                <viewController id="Soj-ma-xmA" sceneMemberID="viewController">
+                <viewController id="Soj-ma-xmA" customClass="CompletedViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j0N-WI-qBV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tiv-1k-LLg">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="AoU-6g-Uge">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCell" id="aJT-7F-Qsk" customClass="CarCell" customModule="TruckDriverApplication" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="393" height="95.333335876464844"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aJT-7F-Qsk" id="SaL-Um-tFJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="95.333335876464844"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-kL-MNp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="95.333333333333329"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aul-l6-3zO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5S-Xj-LZ5">
+                                                                    <rect key="frame" x="0.0" y="19" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-an-4FR">
+                                                                    <rect key="frame" x="0.0" y="38" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Be-gBN">
+                                                                    <rect key="frame" x="0.0" y="57" width="393" height="19"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrw-Ls-ed2">
+                                                                    <rect key="frame" x="0.0" y="76" width="393" height="19.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="1fc-kL-MNp" firstAttribute="leading" secondItem="SaL-Um-tFJ" secondAttribute="leading" id="1ML-LB-IDd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="1fc-kL-MNp" secondAttribute="bottom" id="G79-Lu-alI"/>
+                                                        <constraint firstItem="1fc-kL-MNp" firstAttribute="top" secondItem="SaL-Um-tFJ" secondAttribute="top" id="exb-qa-QNv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1fc-kL-MNp" secondAttribute="trailing" id="uD2-pj-U3Q"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="VINNumberLabel" destination="EaF-Be-gBN" id="cMP-au-gbE"/>
+                                                    <outlet property="madeLabel" destination="aul-l6-3zO" id="GVU-YM-8Sy"/>
+                                                    <outlet property="modelLabel" destination="l5S-Xj-LZ5" id="fCX-g4-zh9"/>
+                                                    <outlet property="priceLabel" destination="Jrw-Ls-ed2" id="Z6l-3I-jYC"/>
+                                                    <outlet property="yearLabel" destination="EsA-an-4FR" id="t3o-WZ-5nl"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rCN-h1-V9W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rCN-h1-V9W" firstAttribute="trailing" secondItem="tiv-1k-LLg" secondAttribute="trailing" id="TTw-8b-SrJ"/>
+                            <constraint firstItem="rCN-h1-V9W" firstAttribute="bottom" secondItem="tiv-1k-LLg" secondAttribute="bottom" id="WUY-d3-FFW"/>
+                            <constraint firstItem="tiv-1k-LLg" firstAttribute="top" secondItem="rCN-h1-V9W" secondAttribute="top" id="gTO-DT-ftc"/>
+                            <constraint firstItem="tiv-1k-LLg" firstAttribute="leading" secondItem="rCN-h1-V9W" secondAttribute="leading" id="rxt-hC-GcL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Completed" image="checkmark.seal" catalog="system" selectedImage="checkmark.seal.fill" id="oEu-PD-1V5"/>
+                    <connections>
+                        <outlet property="tableView" destination="AoU-6g-Uge" id="ANp-uG-Jz1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMD-9x-GiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -636,6 +875,7 @@
     <resources>
         <image name="car" catalog="system" width="128" height="95"/>
         <image name="car.fill" catalog="system" width="128" height="95"/>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="list.bullet.clipboard" catalog="system" width="98" height="128"/>

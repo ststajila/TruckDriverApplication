@@ -13,6 +13,8 @@ class Car{
     var cost: Double
     var belongsTo: String
     var key = ""
+    var deliverBy = ""
+    var completed = false
     
     init(made: String, model: String, year: Int, vin: String, cost: Double, belongsTo: String) {
         self.made = made
@@ -53,6 +55,16 @@ class Car{
             belongsTo = b
         }else{
             belongsTo = ""
+        }
+        if let d = dict["deliverBy"] as? String{
+            deliverBy = d
+        }else{
+            deliverBy = ""
+        }
+        if let c = dict["completed"] as? Bool{
+            completed = c
+        }else{
+            completed = false
         }
     }
 }

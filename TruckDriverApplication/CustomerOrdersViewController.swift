@@ -91,7 +91,7 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
                     print("Array: \(c.orders.count)")
                     for i in 0..<Delegate.orders.count{
                             if Delegate.orders[i].vin == c.orders[indexPath.row].vin{
-                                Delegate.ref.child("orders").removeValue(forKey: c.orders[indexPath.row].key)
+                                Delegate.ref.child("orders").child(Delegate.orders[i].key).removeValue()
                                 Delegate.orders.remove(at: i)
                                 c.orders.remove(at: indexPath.row)
                                 tableView.reloadData()

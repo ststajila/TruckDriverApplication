@@ -47,6 +47,9 @@
 		14BFAF062BA1F277002B4496 /* OrderACarDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */; };
 		14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAAE2B9A1391007546C5 /* Customer.swift */; };
 		14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3FAB22B9A13BD007546C5 /* Shipper.swift */; };
+		853C38722BAE609F00EBAA36 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C38712BAE609F00EBAA36 /* DeliveryViewController.swift */; };
+		853C38742BAE60C800EBAA36 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853C38732BAE60C800EBAA36 /* CompletedViewController.swift */; };
+		85DDD4AD2BAF4EE900C70D68 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DDD4AC2BAF4EE900C70D68 /* MoreInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderACarDeliveryViewController.swift; sourceTree = "<group>"; };
 		14E3FAAE2B9A1391007546C5 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 		14E3FAB22B9A13BD007546C5 /* Shipper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shipper.swift; sourceTree = "<group>"; };
+		853C38712BAE609F00EBAA36 /* DeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		853C38732BAE60C800EBAA36 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		85DDD4AC2BAF4EE900C70D68 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,9 @@
 			children = (
 				14B9A0982B98C18200087E39 /* AppDelegate.swift */,
 				14B9A09A2B98C18200087E39 /* SceneDelegate.swift */,
+				853C38732BAE60C800EBAA36 /* CompletedViewController.swift */,
+				853C38712BAE609F00EBAA36 /* DeliveryViewController.swift */,
+				85DDD4AC2BAF4EE900C70D68 /* MoreInfoViewController.swift */,
 				14B6E8E32BAB2538008291CC /* BoardViewController.swift */,
 				14BFAF052BA1F277002B4496 /* OrderACarDeliveryViewController.swift */,
 				14BFAF032BA1F22A002B4496 /* CustomerOrdersViewController.swift */,
@@ -248,12 +257,15 @@
 			files = (
 				14BFAF042BA1F22A002B4496 /* CustomerOrdersViewController.swift in Sources */,
 				14E3FAB32B9A13BD007546C5 /* Shipper.swift in Sources */,
+				853C38722BAE609F00EBAA36 /* DeliveryViewController.swift in Sources */,
 				1470DC2C2B9F4AD9003F113E /* MainLogInViewController.swift in Sources */,
 				14E3FAAF2B9A1391007546C5 /* Customer.swift in Sources */,
 				14B9A0992B98C18200087E39 /* AppDelegate.swift in Sources */,
 				14B9A09B2B98C18200087E39 /* SceneDelegate.swift in Sources */,
 				14BFAF062BA1F277002B4496 /* OrderACarDeliveryViewController.swift in Sources */,
 				14B9A0AD2B98C7F700087E39 /* NewAccountViewController.swift in Sources */,
+				85DDD4AD2BAF4EE900C70D68 /* MoreInfoViewController.swift in Sources */,
+				853C38742BAE60C800EBAA36 /* CompletedViewController.swift in Sources */,
 				14B6E8E42BAB2538008291CC /* BoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
