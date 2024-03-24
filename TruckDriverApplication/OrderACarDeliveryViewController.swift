@@ -14,7 +14,7 @@ class Car{
     var belongsTo: String
     var key = ""
     var deliverBy = ""
-    var completed = false
+    var completed: Bool
     
     init(made: String, model: String, year: Int, vin: String, cost: Double, belongsTo: String) {
         self.made = made
@@ -23,6 +23,7 @@ class Car{
         self.vin = vin
         self.cost = cost
         self.belongsTo = belongsTo
+        self.completed = false
     }
     
     init(dict: [String: Any]){
@@ -106,7 +107,7 @@ class OrderACarDeliveryViewController: UIViewController {
                                 
                                 c.orders.append(car)
                                 
-                                var ordersDict = ["made": car.made, "model": car.model, "year": car.year, "vin": car.vin, "cost": car.cost, "belongsTo": car.belongsTo] as [String: Any]
+                                var ordersDict = ["made": car.made, "model": car.model, "year": car.year, "vin": car.vin, "cost": car.cost, "belongsTo": car.belongsTo, "completed": false] as [String: Any]
                                 
                                 Delegate.ref.child("orders").childByAutoId().setValue(ordersDict)
                             }

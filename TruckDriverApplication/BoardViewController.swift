@@ -6,8 +6,10 @@
 //
 
 class ShipperDelegate{
-    static var indexOfOrder = -1
-    static var tableView: UITableView?
+    static var selectedCarKey = ""
+    static var boardTableView: UITableView?
+    static var deliveryTableView: UITableView?
+    static var claimedOrders: [Car] = []
 }
 
 
@@ -23,7 +25,7 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
-        ShipperDelegate.tableView = tableView
+        ShipperDelegate.boardTableView = tableView
     }
     
 
@@ -42,12 +44,21 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath) as! CarCell
-        if Delegate.orders[indexPath.row].deliverBy == ""{
-            cell.modelLabel.text = "Model: \(Delegate.orders[indexPath.row].model)"
-            cell.madeLabel.text = "Made: \(Delegate.orders[indexPath.row].made)"
-            cell.yearLabel.text = "Year: \(Delegate.orders[indexPath.row].year)"
-            cell.VINNumberLabel.text = "VIN: \(Delegate.orders[indexPath.row].vin)"
-            cell.priceLabel.text = "Price: \(Delegate.orders[indexPath.row].cost)"
+        
+        var add = true
+        var count = 0
+        while add{
+            if Delegate.orders[indexPath.row + count].deliverBy == ""{
+                cell.modelLabel.text = "Model: \(Delegate.orders[indexPath.row + count].model)"
+                cell.madeLabel.text = "Made: \(Delegate.orders[indexPath.row + count].made)"
+                cell.yearLabel.text = "Year: \(Delegate.orders[indexPath.row + count].year)"
+                cell.VINNumberLabel.text = "VIN: \(Delegate.orders[indexPath.row + count].vin)"
+                cell.priceLabel.text = "Price: \(Delegate.orders[indexPath.row + count].cost)"
+                
+                add = false
+            } else{
+                count += 1
+            }
         }
         return cell
     }
@@ -63,7 +74,18 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        ShipperDelegate.indexOfOrder = indexPath.row
+        var add = true
+        var count = 0
+        while add{
+            if Delegate.orders[indexPath.row + count].deliverBy == ""{
+                ShipperDelegate.selectedCarKey = Delegate.orders[indexPath.row + count].key
+                add = false
+            } else{
+                count += 1
+            }
+        }
+        
+        
         performSegue(withIdentifier: "moreInfo", sender: self)
     }
 }

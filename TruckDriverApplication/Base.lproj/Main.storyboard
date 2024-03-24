@@ -262,6 +262,7 @@
         <!--Delivery-->
         <scene sceneID="bss-oa-j3Z">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3qo-qD-kLl" customClass="DeliveryViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izY-qx-jw2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -274,41 +275,41 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCell" id="SlM-UM-ZcN" customClass="CarCell" customModule="TruckDriverApplication" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="carCell" id="quD-9X-sza" customClass="CarCell" customModule="TruckDriverApplication" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="393" height="95.333335876464844"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SlM-UM-ZcN" id="0Oc-3b-rAH">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="quD-9X-sza" id="Vkd-Zk-v4f">
                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="95.333335876464844"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-fT-qJa">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qbm-3k-ii6">
                                                             <rect key="frame" x="0.0" y="0.0" width="393" height="95.333333333333329"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGh-9D-1mq">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwX-JK-3VM">
                                                                     <rect key="frame" x="0.0" y="0.0" width="393" height="19"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XQ-6Z-xCa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJj-GK-jKg">
                                                                     <rect key="frame" x="0.0" y="19" width="393" height="19"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZC-Cn-XiW">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9i-kK-XK6">
                                                                     <rect key="frame" x="0.0" y="38" width="393" height="19"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF4-LY-W5b">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OTQ-b3-p7R">
                                                                     <rect key="frame" x="0.0" y="57" width="393" height="19"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDT-9K-fGE">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-Qe-Bge">
                                                                     <rect key="frame" x="0.0" y="76" width="393" height="19.333333333333329"/>
                                                                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -318,18 +319,18 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="ZJb-fT-qJa" secondAttribute="bottom" id="1aY-uu-MIa"/>
-                                                        <constraint firstItem="ZJb-fT-qJa" firstAttribute="leading" secondItem="0Oc-3b-rAH" secondAttribute="leading" id="cNd-Bn-7n3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ZJb-fT-qJa" secondAttribute="trailing" id="d2v-kV-FKJ"/>
-                                                        <constraint firstItem="ZJb-fT-qJa" firstAttribute="top" secondItem="0Oc-3b-rAH" secondAttribute="top" id="grN-R9-w8L"/>
+                                                        <constraint firstItem="qbm-3k-ii6" firstAttribute="leading" secondItem="Vkd-Zk-v4f" secondAttribute="leading" id="0Ug-0E-IHw"/>
+                                                        <constraint firstAttribute="bottom" secondItem="qbm-3k-ii6" secondAttribute="bottom" id="Kx6-cF-MHE"/>
+                                                        <constraint firstItem="qbm-3k-ii6" firstAttribute="top" secondItem="Vkd-Zk-v4f" secondAttribute="top" id="Pjv-ZX-rLd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qbm-3k-ii6" secondAttribute="trailing" id="hxD-HL-NZS"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="VINNumberLabel" destination="uF4-LY-W5b" id="LMz-yl-NWi"/>
-                                                    <outlet property="madeLabel" destination="KGh-9D-1mq" id="H6f-kF-QlR"/>
-                                                    <outlet property="modelLabel" destination="1XQ-6Z-xCa" id="E7g-pD-Id8"/>
-                                                    <outlet property="priceLabel" destination="XDT-9K-fGE" id="wqd-MP-wq4"/>
-                                                    <outlet property="yearLabel" destination="UZC-Cn-XiW" id="z5F-iX-OOv"/>
+                                                    <outlet property="VINNumberLabel" destination="OTQ-b3-p7R" id="n2S-Po-zt5"/>
+                                                    <outlet property="madeLabel" destination="JwX-JK-3VM" id="Owy-1E-45T"/>
+                                                    <outlet property="modelLabel" destination="pJj-GK-jKg" id="qF9-F8-csn"/>
+                                                    <outlet property="priceLabel" destination="sJv-Qe-Bge" id="hGx-X6-Okm"/>
+                                                    <outlet property="yearLabel" destination="R9i-kK-XK6" id="8N7-Gd-ZDn"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -350,9 +351,9 @@
                     <navigationItem key="navigationItem" id="oxt-BE-kJz"/>
                     <connections>
                         <outlet property="tableView" destination="8Cx-5H-dCf" id="EaK-qH-4He"/>
+                        <segue destination="uf8-I3-EmN" kind="show" identifier="status" id="zdU-aN-7fC"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4031" y="-475"/>
         </scene>
@@ -870,6 +871,84 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s4-1e-cxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2350.3816793893129" y="-475.35211267605638"/>
+        </scene>
+        <!--Is Delivered View Controller-->
+        <scene sceneID="cBo-Bn-PHf">
+            <objects>
+                <viewController id="uf8-I3-EmN" customClass="IsDeliveredViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lga-dJ-Fwu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Icq-39-vYa">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmW-P5-qex">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82i-aj-PG3">
+                                        <rect key="frame" x="0.0" y="143" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8K-vr-RPP">
+                                        <rect key="frame" x="0.0" y="286" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2U-PF-egq">
+                                        <rect key="frame" x="0.0" y="429" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRF-ga-v0I">
+                                        <rect key="frame" x="0.0" y="572" width="393" height="143"/>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iVl-8k-G7b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iVl-8k-G7b" firstAttribute="bottom" secondItem="Icq-39-vYa" secondAttribute="bottom" id="1sn-pG-deE"/>
+                            <constraint firstItem="Icq-39-vYa" firstAttribute="top" secondItem="iVl-8k-G7b" secondAttribute="top" id="8Zq-8y-rRj"/>
+                            <constraint firstItem="iVl-8k-G7b" firstAttribute="trailing" secondItem="Icq-39-vYa" secondAttribute="trailing" id="pf1-k7-OTc"/>
+                            <constraint firstItem="Icq-39-vYa" firstAttribute="leading" secondItem="iVl-8k-G7b" secondAttribute="leading" id="zMo-IQ-AUb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1xz-2f-fzU">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lkx-0S-hxu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="AOt-P3-eUZ">
+                                <rect key="frame" x="302" y="0.0" width="75" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system"/>
+                                <connections>
+                                    <action selector="delivered:" destination="uf8-I3-EmN" eventType="touchUpInside" id="XGk-aS-tAk"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="VINLabel" destination="y2U-PF-egq" id="sEl-L7-Kax"/>
+                        <outlet property="costLabel" destination="QRF-ga-v0I" id="n4j-TY-rCm"/>
+                        <outlet property="madeLabel" destination="qmW-P5-qex" id="Fwq-1R-s2L"/>
+                        <outlet property="modelLabel" destination="82i-aj-PG3" id="T4N-km-nEL"/>
+                        <outlet property="yearLabel" destination="n8K-vr-RPP" id="OuG-aQ-hqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZm-y1-cc1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4485" y="-1158"/>
         </scene>
     </scenes>
     <resources>
