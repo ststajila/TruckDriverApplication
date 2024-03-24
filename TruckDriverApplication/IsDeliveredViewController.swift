@@ -24,7 +24,7 @@ class IsDeliveredViewController: UIViewController {
         
         alert.addAction(alertAction)
         
-        for ord in Delegate.orders{
+        for ord in ShipperDelegate.claimedOrders{
             if ord.key == ShipperDelegate.selectedCarKey{
                 madeLabel.text = "Made: \(ord.made)"
                 modelLabel.text = "Model: \(ord.model)"
@@ -43,13 +43,27 @@ class IsDeliveredViewController: UIViewController {
         for i in 0 ..< Delegate.orders.count{
             if Delegate.orders[i].key == ShipperDelegate.selectedCarKey{
                 if Delegate.orders[i].completed == false{
+                   
                     Delegate.orders[i].completed = true
                     
                     var ordersDict = ["made":  Delegate.orders[i].made, "model": Delegate.orders[i].model, "year": Delegate.orders[i].year, "vin": Delegate.orders[i].vin, "cost": Delegate.orders[i].cost, "belongsTo": Delegate.orders[i].belongsTo, "deliverBy": Delegate.orders[i].deliverBy, "completed": true] as [String: Any]
                     
                     Delegate.ref.child("orders").child(ShipperDelegate.selectedCarKey).updateChildValues(ordersDict)
                     
-                    ShipperDelegate.deliveryTableView?.reloadData()
+                    for i in 0 ..< ShipperDelegate.claimedOrders.count{
+                        if ShipperDelegate.claimedOrders[i].key == ShipperDelegate.selectedCarKey{
+                            
+                            ShipperDelegate.completedOrders.append(ShipperDelegate.claimedOrders[i])
+                            
+                            ShipperDelegate.claimedOrders.remove(at: i)
+                            break
+                            
+                        }
+                    }
+                    
+                    ShipperDelegate.deliveryTableView!.reloadData()
+                    ShipperDelegate.boardTableView?.reloadData()
+                    ShipperDelegate.completedTableView?.reloadData()
                     
                     alert.title = "Success"
                     alert.message = "The order marked Delivered"

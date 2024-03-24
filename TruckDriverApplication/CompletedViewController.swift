@@ -18,39 +18,24 @@ class CompletedViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
+        ShipperDelegate.completedTableView = tableView
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        var count = 0
-        
-        for ord in Delegate.orders{
-            if ord.deliverBy == Delegate.currentSession && ord.completed{
-                count += 1
-            }
-        }
-        
-        return count
+        return ShipperDelegate.completedOrders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath) as! CarCell
         
-        var add = true
-        var count = 0
-        while add{
-            if Delegate.orders[indexPath.row + count].deliverBy == Delegate.currentSession && Delegate.orders[indexPath.row + count].completed{
-                cell.modelLabel.text = "Model: \(Delegate.orders[indexPath.row + count].model)"
-                cell.madeLabel.text = "Made: \(Delegate.orders[indexPath.row + count].made)"
-                cell.yearLabel.text = "Year: \(Delegate.orders[indexPath.row + count].year)"
-                cell.VINNumberLabel.text = "VIN: \(Delegate.orders[indexPath.row + count].vin)"
-                cell.priceLabel.text = "Price: $\(Delegate.orders[indexPath.row + count].cost)"
+        cell.modelLabel.text = "Model: \(ShipperDelegate.completedOrders[indexPath.row].model)"
+                cell.madeLabel.text = "Made: \(ShipperDelegate.completedOrders[indexPath.row].made)"
+                cell.yearLabel.text = "Year: \(ShipperDelegate.completedOrders[indexPath.row].year)"
+                cell.VINNumberLabel.text = "VIN: \(ShipperDelegate.completedOrders[indexPath.row].vin)"
+                cell.priceLabel.text = "Price: $\(ShipperDelegate.completedOrders[indexPath.row].cost)"
                 
-                add = false
-            } else{
-                count += 1
-            }
-        }
         return cell
     }
 }

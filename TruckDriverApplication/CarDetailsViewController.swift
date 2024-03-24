@@ -38,8 +38,6 @@ class CarDetailsViewController: UIViewController {
     
     @IBAction func claim(_ sender: Any) {
         
-        viewDidLoad()
-        
         for i in 0 ..< Delegate.orders.count{
             if Delegate.orders[i].key == ShipperDelegate.selectedCarKey{
                 if Delegate.orders[i].deliverBy == ""{
@@ -49,13 +47,26 @@ class CarDetailsViewController: UIViewController {
                     
                     Delegate.orders[i].deliverBy = Delegate.currentSession
                     
+                    for i in 0 ..< ShipperDelegate.waitingForDelivery.count{
+                        if ShipperDelegate.waitingForDelivery[i].key == ShipperDelegate.selectedCarKey{
+                            
+                            ShipperDelegate.claimedOrders.append(ShipperDelegate.waitingForDelivery[i])
+                            
+                            ShipperDelegate.waitingForDelivery.remove(at: i)
+                            
+                            ShipperDelegate.deliveryTableView?.reloadData()
+                            
+                            break
+                        }
+                    }
+                    
+                    
                     alert.title = "Success"
                     alert.message = "Car was added to your delivery list"
                     
                     present(alert, animated: true)
                     
                     ShipperDelegate.boardTableView!.reloadData()
-                    ShipperDelegate.deliveryTableView!.reloadData()
                     
                     break
                     

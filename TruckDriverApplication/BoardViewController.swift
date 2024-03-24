@@ -9,7 +9,11 @@ class ShipperDelegate{
     static var selectedCarKey = ""
     static var boardTableView: UITableView?
     static var deliveryTableView: UITableView?
+    static var completedTableView: UITableView?
+    static var waitingForDelivery: [Car] = []
     static var claimedOrders: [Car] = []
+    static var completedOrders: [Car] = []
+    
 }
 
 
@@ -31,35 +35,18 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        var count = 0
-        
-        for ord in Delegate.orders{
-            if ord.deliverBy == ""{
-                count += 1
-            }
-        }
-        
-        return count
+        return ShipperDelegate.waitingForDelivery.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "carCell", for: indexPath) as! CarCell
         
-        var add = true
-        var count = 0
-        while add{
-            if Delegate.orders[indexPath.row + count].deliverBy == ""{
-                cell.modelLabel.text = "Model: \(Delegate.orders[indexPath.row + count].model)"
-                cell.madeLabel.text = "Made: \(Delegate.orders[indexPath.row + count].made)"
-                cell.yearLabel.text = "Year: \(Delegate.orders[indexPath.row + count].year)"
-                cell.VINNumberLabel.text = "VIN: \(Delegate.orders[indexPath.row + count].vin)"
-                cell.priceLabel.text = "Price: $\(Delegate.orders[indexPath.row + count].cost)"
+                cell.modelLabel.text = "Model: \(ShipperDelegate.waitingForDelivery[indexPath.row].model)"
+                cell.madeLabel.text = "Made: \(ShipperDelegate.waitingForDelivery[indexPath.row].made)"
+                cell.yearLabel.text = "Year: \(ShipperDelegate.waitingForDelivery[indexPath.row].year)"
+                cell.VINNumberLabel.text = "VIN: \(ShipperDelegate.waitingForDelivery[indexPath.row].vin)"
+                cell.priceLabel.text = "Price: $\(ShipperDelegate.waitingForDelivery[indexPath.row].cost)"
                 
-                add = false
-            } else{
-                count += 1
-            }
-        }
         return cell
     }
     
@@ -74,17 +61,7 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        var add = true
-        var count = 0
-        while add{
-            if Delegate.orders[indexPath.row + count].deliverBy == ""{
-                ShipperDelegate.selectedCarKey = Delegate.orders[indexPath.row + count].key
-                add = false
-            } else{
-                count += 1
-            }
-        }
-        
+        ShipperDelegate.selectedCarKey = ShipperDelegate.waitingForDelivery[indexPath.row].key
         
         performSegue(withIdentifier: "moreInfo", sender: self)
     }

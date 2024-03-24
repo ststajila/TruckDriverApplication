@@ -14,6 +14,9 @@ class MainLogInViewController: UIViewController {
     @IBOutlet weak var emailOutlet: UITextField!
     @IBOutlet weak var passwordOutlet: UITextField!
     
+    var alert = UIAlertController(title: "Error", message: "Invalid login or password", preferredStyle: .alert)
+    var alertAction = UIAlertAction(title: "Ok", style: .default)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,6 +63,8 @@ class MainLogInViewController: UIViewController {
             print("ready")
         }
         
+        alert.addAction(alertAction)
+        
     }
     
     
@@ -68,9 +73,28 @@ class MainLogInViewController: UIViewController {
         if isCustomer(email: emailOutlet.text!, password: passwordOutlet.text!){
             performSegue(withIdentifier: "customerAccount", sender: self)
         } else if isShipper(email: emailOutlet.text!, password: passwordOutlet.text!){
+            
+            ShipperDelegate.waitingForDelivery = []
+            ShipperDelegate.claimedOrders = []
+            ShipperDelegate.completedOrders = []
+            
+            for orders in Delegate.orders{
+                if orders.deliverBy == ""{
+                    ShipperDelegate.waitingForDelivery.append(orders)
+                }else{
+                    if orders.deliverBy == Delegate.currentSession{
+                        if orders.completed{
+                            ShipperDelegate.completedOrders.append(orders)
+                        }else{
+                            ShipperDelegate.claimedOrders.append(orders)
+                        }
+                    }
+                }
+            }
+            
             performSegue(withIdentifier: "shipperAccount", sender: self)
         }else{
-            print("Error")
+            present(alert, animated: true)
         }
         
         
