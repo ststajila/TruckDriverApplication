@@ -22,8 +22,12 @@ class MoreInfoViewController: UIViewController {
         super.viewDidLoad()
         
         alert.addAction(alertAction)
-
+        
+        print("Hi")
+        
         for ord in Delegate.orders{
+            
+            print("Inside")
             if ord.key == ShipperDelegate.selectedCarKey{
                 madeLabel.text = "Made: \(ord.made)"
                 modelLabel.text = "Model: \(ord.model)"
@@ -33,7 +37,6 @@ class MoreInfoViewController: UIViewController {
                 break
             }
         }
-        
     }
     
     @IBAction func claim(_ sender: Any) {

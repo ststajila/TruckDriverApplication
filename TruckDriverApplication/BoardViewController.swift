@@ -53,7 +53,7 @@ class BoardViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 cell.madeLabel.text = "Made: \(Delegate.orders[indexPath.row + count].made)"
                 cell.yearLabel.text = "Year: \(Delegate.orders[indexPath.row + count].year)"
                 cell.VINNumberLabel.text = "VIN: \(Delegate.orders[indexPath.row + count].vin)"
-                cell.priceLabel.text = "Price: \(Delegate.orders[indexPath.row + count].cost)"
+                cell.priceLabel.text = "Price: $\(Delegate.orders[indexPath.row + count].cost)"
                 
                 add = false
             } else{

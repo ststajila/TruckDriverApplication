@@ -80,7 +80,7 @@ class CustomerOrdersViewController: UIViewController, UITableViewDelegate, UITab
         cell.madeLabel.text = "Made: \(myOrders[indexPath.row].made)"
         cell.yearLabel.text = "Year: \(myOrders[indexPath.row].year)"
         cell.VINNumberLabel.text = "VIN: \(myOrders[indexPath.row].vin)"
-        cell.priceLabel.text = "Price: \(myOrders[indexPath.row].cost)"
+        cell.priceLabel.text = "Price: $\(myOrders[indexPath.row].cost)"
         return cell
     }
     

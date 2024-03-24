@@ -76,44 +76,44 @@
             </objects>
             <point key="canvasLocation" x="1061.8320610687022" y="3.5211267605633805"/>
         </scene>
-        <!--More Info View Controller-->
+        <!--Car Details View Controller-->
         <scene sceneID="CTk-fQ-i7p">
             <objects>
-                <viewController id="cdn-Uv-ILc" customClass="MoreInfoViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cdn-Uv-ILc" customClass="CarDetailsViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QDz-0e-aOJ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qFH-lR-z9B">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uej-z0-Ppo">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkt-T5-QX5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsX-h0-qny">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="143"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNm-km-eKi">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4G-kb-Mdw">
                                         <rect key="frame" x="0.0" y="143" width="393" height="143"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFc-Mt-9zE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-Qh-BW2">
                                         <rect key="frame" x="0.0" y="286" width="393" height="143"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPh-zM-vaC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN2-nh-5bJ">
                                         <rect key="frame" x="0.0" y="429" width="393" height="143"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY2-6Z-9O1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oE1-Ff-ffN">
                                         <rect key="frame" x="0.0" y="572" width="393" height="143"/>
-                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -123,10 +123,10 @@
                         <viewLayoutGuide key="safeArea" id="dif-9M-15d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qFH-lR-z9B" firstAttribute="leading" secondItem="dif-9M-15d" secondAttribute="leading" id="93J-Ks-p1u"/>
-                            <constraint firstItem="dif-9M-15d" firstAttribute="bottom" secondItem="qFH-lR-z9B" secondAttribute="bottom" id="Nob-hU-fH8"/>
-                            <constraint firstItem="qFH-lR-z9B" firstAttribute="top" secondItem="dif-9M-15d" secondAttribute="top" id="d2z-Lx-XCD"/>
-                            <constraint firstItem="dif-9M-15d" firstAttribute="trailing" secondItem="qFH-lR-z9B" secondAttribute="trailing" id="r4s-3P-H2M"/>
+                            <constraint firstItem="uej-z0-Ppo" firstAttribute="top" secondItem="dif-9M-15d" secondAttribute="top" id="13f-H7-mwn"/>
+                            <constraint firstItem="uej-z0-Ppo" firstAttribute="leading" secondItem="dif-9M-15d" secondAttribute="leading" id="MIz-ff-j19"/>
+                            <constraint firstItem="dif-9M-15d" firstAttribute="bottom" secondItem="uej-z0-Ppo" secondAttribute="bottom" id="Uhf-iL-sh4"/>
+                            <constraint firstItem="dif-9M-15d" firstAttribute="trailing" secondItem="uej-z0-Ppo" secondAttribute="trailing" id="WZm-UD-9hw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VKj-GF-HSW">
@@ -143,11 +143,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="VINLabel" destination="IPh-zM-vaC" id="tCS-7r-TVZ"/>
-                        <outlet property="costLabel" destination="bY2-6Z-9O1" id="Svf-bZ-ovk"/>
-                        <outlet property="madeLabel" destination="xkt-T5-QX5" id="pvP-40-rkq"/>
-                        <outlet property="modelLabel" destination="fNm-km-eKi" id="lls-eH-Ycf"/>
-                        <outlet property="yearLabel" destination="FFc-Mt-9zE" id="whW-ra-as7"/>
+                        <outlet property="VINLabel" destination="uN2-nh-5bJ" id="WvE-zT-xn6"/>
+                        <outlet property="costLabel" destination="oE1-Ff-ffN" id="HP3-FT-5zJ"/>
+                        <outlet property="madeLabel" destination="QsX-h0-qny" id="6mv-PA-4yE"/>
+                        <outlet property="modelLabel" destination="J4G-kb-Mdw" id="zoQ-aT-hib"/>
+                        <outlet property="yearLabel" destination="hiq-Qh-BW2" id="FHr-Qe-uFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDX-E0-qcS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -262,7 +262,6 @@
         <!--Delivery-->
         <scene sceneID="bss-oa-j3Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3qo-qD-kLl" customClass="DeliveryViewController" customModule="TruckDriverApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izY-qx-jw2">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -354,6 +353,7 @@
                         <segue destination="uf8-I3-EmN" kind="show" identifier="status" id="zdU-aN-7fC"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttv-1B-ksV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4031" y="-475"/>
         </scene>
