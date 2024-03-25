@@ -736,7 +736,7 @@
                                     <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3V3-qQ-z2d">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                                         <items>
-                                            <navigationItem title="Title" id="x3D-nh-DfE">
+                                            <navigationItem title="Place an Order" id="x3D-nh-DfE">
                                                 <barButtonItem key="rightBarButtonItem" style="plain" systemItem="cancel" id="v7o-4e-kZg">
                                                     <connections>
                                                         <action selector="done:" destination="DHx-6C-eb5" id="ffO-cb-4Ej"/>
